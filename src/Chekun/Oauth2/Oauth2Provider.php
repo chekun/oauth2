@@ -116,17 +116,17 @@ abstract class OAuth2Provider {
             case 'GET':
                 $url .= '?'.http_build_query($params);
                 $response = $this->client->get($url)->getContent();
-                $return = $this->parse_response($response);
+                $return = $this->parseResponse($response);
                 break;
             case 'POST':
                 $response = $this->client->submit($url, $params)->getContent();
-                $return = $this->parse_response($response);
+                $return = $this->parseResponse($response);
                 break;
             default:
                 throw new \OutOfBoundsException("Method '{$this->method}' must be either GET or POST");
         }
-
-        if ( ! empty($return[$this->errorKey]) OR ! isset($return['accessToken'])) {
+		
+        if ( ! empty($return[$this->errorKey]) OR ! isset($return['access_token'])) {
             throw new OAuth2Exception($return);
         }
 

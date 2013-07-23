@@ -22,7 +22,7 @@ class AccessToken extends Token {
         // {
         // 	throw new \Exception('We do not know when this access_token will expire');
         // }
-
+		
         $this->accessToken = $options[$options['access_token_key']];
 
         isset($options[$options['uid_key']]) and $this->uid = $options[$options['uid_key']];

@@ -7,7 +7,7 @@ abstract class Token {
     {
         $name = ucfirst(strtolower($name));
 
-        $class = $name . 'Token';
+        $class = '\Chekun\Oauth2\Token\\' . $name . 'Token';
 
         return new $class($options);
     }
