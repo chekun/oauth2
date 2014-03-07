@@ -11,7 +11,7 @@ class Weixin extends Oauth2Provider implements Oauth2ProviderInterface {
 
     public $name = 'weixin';
 
-    public $human = 'weixin';
+    public $human = '微信';
 
     public $uidKey = 'openid';
 
