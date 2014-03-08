@@ -49,6 +49,7 @@ class Weixin extends Oauth2Provider implements Oauth2ProviderInterface {
             'uid' => $user->openid,
             'screen_name' => $user->nickname,
             'name' => $user->nickname,
+            'sex' => $user->sex,
             'location' => $user->province,
             'description' => '',
             'image' => $user->headimgurl,
